@@ -38,7 +38,7 @@
                   (= number 7) 1
                   (= number 6) 1
                   (= number 5) 1
-                  (= number 4) 0               
+                  (= number 4) 0
                   (= number 3) 0
                   (= number 2) 0
                   (= number 1) 0)))
@@ -87,3 +87,6 @@
 
 (deftest test-fizzbuzz-9-returns-3-fizz-1-buzz
   (is (= [3 1] (fizzbuzz-cps 9 id))))
+
+(deftest test-fizzbuzz-10-returns-3-fizz-2-buzz
+  (is (= [3 2] (fizzbuzz-cps 10 id))))
