@@ -32,20 +32,21 @@
   (is (= 3 (+-cps-3 1 2 3 (fn [res]
                             (/ res 2))))))
 
-(defn count-fizz [number]
-  (cond (= number 6) 2
-        (= number 5) 1
-        (= number 3) 1
-        (= number 1) 0))
+(defn count-buzz-cps [number function]
+  (function (cond (= number 6) 1
+         (= number 5) 1
+         (= number 3) 0
+         (= number 1) 0)))
 
-(defn count-buzz [number]
-  (cond (= number 6) 1
-        (= number 5) 1
-        (= number 3) 0
-        (= number 1) 0))
+(defn count-fizz-cps [number function]
+  (function (cond (= number 6) 2
+         (= number 5) 1
+         (= number 3) 1
+         (= number 1) 0)))
+
 
 (defn fizzbuzz-cps [number function]
-  (function [(count-fizz number)
+  (function [(count-fizz-cps number function)
              (count-buzz number)]))
 
 (deftest test-fizzbuzz-1-returns-0-fizz-0-buzz
