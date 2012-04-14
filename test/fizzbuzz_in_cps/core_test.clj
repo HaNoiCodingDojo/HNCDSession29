@@ -37,3 +37,6 @@
 
 (deftest test-fizzbuzz-1-returns-0-fizz-0-buzz
   (is (= [0 0] (fizzbuzz-cps 1 id))))
+
+(deftest test-fizzbuzz-1-with-total-returns-0
+  (is (= 0 (fizzbuzz-cps 1 (fn [res] (apply + res))))))
