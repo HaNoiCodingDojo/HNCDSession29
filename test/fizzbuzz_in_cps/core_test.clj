@@ -45,8 +45,8 @@
          (= number 1) 0)))
 
 (defn fizzbuzz-cps [number function]
-  (function [(count-fizz-cps number function)
-             (count-buzz-cps number function)]))
+  (function [(count-fizz-cps number id)
+             (count-buzz-cps number id)]))
 
 (deftest test-fizzbuzz-1-returns-0-fizz-0-buzz
   (is (= [0 0] (fizzbuzz-cps 1 id))))
