@@ -23,3 +23,6 @@
 
 (deftest test-1+1+1-with-id-function-in-cps-is-3
   (is (= 3 (+-cps-3 1 1 1 id))))
+
+(deftest test-1+2+3-with-id-function-in-cps-is-3
+  (is (= 6 (+-cps-3 1 2 3 id))))
