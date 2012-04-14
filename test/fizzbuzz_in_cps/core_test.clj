@@ -3,7 +3,7 @@
         fizzbuzz-in-cps.core))
 
 (defn +-cps [number1 number2 function]
-  (+ number1 number2))
+  (function (+ number1 number2)))
 
 (defn id [arg]
   arg)
