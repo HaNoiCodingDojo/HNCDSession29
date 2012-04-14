@@ -33,7 +33,8 @@
                             (/ res 2))))))
 
 (defn count-buzz-cps [number function]
-  (function (cond (= number 7) 1
+  (function (cond (= number 8) 1
+                  (= number 7) 1
                   (= number 6) 1
                   (= number 5) 1
                   (= number 4) 0               
@@ -42,7 +43,8 @@
                   (= number 1) 0)))
 
 (defn count-fizz-cps [number function]
-  (function (cond (= number 7) 2
+  (function (cond (= number 8) 2
+                  (= number 7) 2
                   (= number 6) 2
                   (= number 5) 1
                   (= number 4) 1
