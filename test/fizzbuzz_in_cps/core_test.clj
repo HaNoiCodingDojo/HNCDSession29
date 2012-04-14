@@ -78,3 +78,5 @@
 (deftest test-fizzbuzz-2-returns-0-fizz-0-buzz
   (is (= [0 0] (fizzbuzz-cps 2 id))))
 
+(deftest test-fizzbuzz-8-returns-2-fizz-1-buzz
+  (is (= [2 1] (fizzbuzz-cps 8 id))))
