@@ -36,8 +36,9 @@
   (function (cond (= number 7) 1
                   (= number 6) 1
                   (= number 5) 1
-                  (= number 4) 0
+                  (= number 4) 0               
                   (= number 3) 0
+                  
                   (= number 1) 0)))
 
 (defn count-fizz-cps [number function]
@@ -72,4 +73,7 @@
 
 (deftest test-fizzbuzz-7-returns-2-fizzes-1-buzz
   (is (= [2 1] (fizzbuzz-cps 7 id))))
+
+(deftest test-fizzbuzz-2-returns-0-fizz-0-buzz
+  (is (= [0 0] (fizzbuzz-cps 2 id))))
 
