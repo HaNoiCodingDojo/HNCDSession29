@@ -33,7 +33,8 @@
                             (/ res 2))))))
 
 (defn fizzbuzz-cps [number function]
-  (function (cond (= number 5) [1 1]
+  (function (cond (= number 6) [2 1]
+                  (= number 5) [1 1]
                   (= number 3) [1 0]
                   (= number 1) [0 0])))
 
