@@ -16,4 +16,7 @@
 
 (deftest test-1-+-2-with-divided-by-2-function-in-cps-is-3_2
   (is (= (/ 3 2) (+-cps 1 2 (fn [res]
-                        (/ res 2))))))
+                              (/ res 2))))))
+
+(deftest test-1+1+1-with-id-function-in-cps-is-3
+  (is (= 3 (+-cps-3 1 1 1 id))))
