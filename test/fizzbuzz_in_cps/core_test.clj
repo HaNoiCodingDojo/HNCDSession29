@@ -38,7 +38,7 @@
                   (= number 5) 1
                   (= number 4) 0               
                   (= number 3) 0
-                  
+                  (= number 2) 0
                   (= number 1) 0)))
 
 (defn count-fizz-cps [number function]
@@ -47,6 +47,7 @@
                   (= number 5) 1
                   (= number 4) 1
                   (= number 3) 1
+                  (= number 2) 0
                   (= number 1) 0)))
 
 (defn fizzbuzz-cps [number function]
