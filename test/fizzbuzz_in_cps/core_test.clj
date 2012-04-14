@@ -6,8 +6,8 @@
   (function (+ number1 number2)))
 
 (defn +-cps-3 [number1 number2 number3 function]
-  (function (+ number1 number2 number3)))
-
+  (function (+cps (+cps number1 number2 function)
+                  number3 function) ))
 (defn id [arg]
   arg)
 
