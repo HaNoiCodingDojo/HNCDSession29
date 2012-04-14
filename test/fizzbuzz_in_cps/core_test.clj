@@ -36,6 +36,7 @@
   (function (cond (= number 7) 1
                   (= number 6) 1
                   (= number 5) 1
+                  (= number 4) 0
                   (= number 3) 0
                   (= number 1) 0)))
 
@@ -43,6 +44,7 @@
   (function (cond (= number 7) 2
                   (= number 6) 2
                   (= number 5) 1
+                  (= number 4) 1
                   (= number 3) 1
                   (= number 1) 0)))
 
@@ -59,6 +61,9 @@
 (deftest test-fizzbuzz-3-returns-1-fizz-0-buzz
   (is (= [1 0] (fizzbuzz-cps 3 id))))
 
+(deftest test-fizzbuzz-4-returns-1-fizz-0-buzz
+  (is (= [1 0] (fizzbuzz-cps 4 id))))
+
 (deftest test-fizzbuzz-5-returns-1-fizz-1-buzz
   (is (= [1 1] (fizzbuzz-cps 5 id))))
 
@@ -68,5 +73,3 @@
 (deftest test-fizzbuzz-7-returns-2-fizzes-1-buzz
   (is (= [2 1] (fizzbuzz-cps 7 id))))
 
-(deftest test-fizzbuzz-4-returns-1-fizz-0-buzz
-  (is (= [1 0] (fizzbuzz-cps 4 id))))
