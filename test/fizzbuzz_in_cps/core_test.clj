@@ -8,6 +8,7 @@
 (defn +-cps-3 [number1 number2 number3 function]
   (function (+-cps (+-cps number1 number2 function)
                   number3 function) ))
+
 (defn id [arg]
   arg)
 
@@ -24,5 +25,9 @@
 (deftest test-1+1+1-with-id-function-in-cps-is-3
   (is (= 3 (+-cps-3 1 1 1 id))))
 
-(deftest test-1+2+3-with-id-function-in-cps-is-3
+(deftest test-1+2+3-with-id-function-in-cps-is-6
   (is (= 6 (+-cps-3 1 2 3 id))))
+
+(deftest test-1+2+3-with-div-2-function-in-cps-is-3
+  (is (= 3 (+-cps-3 1 2 3 (fn [res]
+                            (/ res 2))))))
