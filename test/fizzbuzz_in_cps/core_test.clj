@@ -33,8 +33,8 @@
                             (/ res 2))))))
 
 (defn fizzbuzz-cps [number function]
-  ( cond  (= number 3) (function [1 0])
-          (= number 1) (function [0 0])) )
+  (function (cond  (= number 3) [1 0]
+                   (= number 1) [0 0])))
 
 (deftest test-fizzbuzz-1-returns-0-fizz-0-buzz
   (is (= [0 0] (fizzbuzz-cps 1 id))))
