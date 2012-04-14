@@ -40,3 +40,6 @@
 
 (deftest test-fizzbuzz-1-with-total-returns-0
   (is (= 0 (fizzbuzz-cps 1 (fn [res] (apply + res))))))
+
+(deftest test-fizzbuzz-3-returns-1-fizz-0-buzz
+  (is (= [1 0] (fizzbuzz-cps 3 id))))
