@@ -62,3 +62,6 @@
 
 (deftest test-fizzbuzz-6-returns-2-fizzes-1-buzz
   (is (= [2 1] (fizzbuzz-cps 6 id))))
+
+(deftest test-fizzbuzz-6-returns-2-fizzes-1-buzz
+  (is (= [2 1] (fizzbuzz-cps 7 id))))
