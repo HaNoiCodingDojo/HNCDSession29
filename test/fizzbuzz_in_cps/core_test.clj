@@ -31,3 +31,6 @@
 (deftest test-1+2+3-with-div-2-function-in-cps-is-3
   (is (= 3 (+-cps-3 1 2 3 (fn [res]
                             (/ res 2))))))
+
+(deftest test-fizzbuzz-1-returns-0-fizz-0-buzz
+  (is (= [0 0] (fizzbuzz-cps 1 id))))
