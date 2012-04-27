@@ -1,5 +1,9 @@
 # fizzbuzz-in-cps
 
+## 2012/04/14
+
+Randori Kata / Clojure (Clojure) / Fizzbuzz in CPS / EPL
+
 ## Bs & Cs
 
 ### Benefits
